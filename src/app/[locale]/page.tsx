@@ -16,7 +16,7 @@ export async function generateMetadata({
     };
 }
 
-export default function Home({params: {locale}}: {params: {locale: string}}) {
+export default function Page({params: {locale}}: {params: {locale: string}}) {
     unstable_setRequestLocale(locale);
     const t = useTranslations('HomePage');
 
@@ -24,7 +24,6 @@ export default function Home({params: {locale}}: {params: {locale: string}}) {
         <div>
             <h1>{t('title')}</h1>
             <p>{t('content')}</p>
-            {/*<Link href="/about">{t('about')}</Link>*/}
         </div>
     );
 }

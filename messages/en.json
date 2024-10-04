@@ -1,9 +1,22 @@
 {
+    "Header": {
+        "menu_popular": "Popular"
+    },
     "LangSwitcher": {
         "locale": "{locale, select, en {English} ro {Romanian} other {Unknown}}"
     },
     "HomePage": {
         "title": "Home",
         "content": "Welcome!"
+    },
+    "PopularPage": {
+        "title": "Popular movies"
+    },
+    "MoviePage": {
+        "movie_title": "Title",
+        "movie_overview": "Overview",
+        "movie_release_date": "Release date",
+        "movie_rating": "Rating",
+        "movie_genres": "Genres"
     }
 }

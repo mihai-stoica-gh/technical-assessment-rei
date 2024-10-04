@@ -1,9 +1,22 @@
 {
+    "Header": {
+        "menu_popular": "Populare"
+    },
     "LangSwitcher": {
         "locale": "{locale, select, en {Engleza} ro {Romana} other {Necunoscut}}"
     },
     "HomePage": {
-      "title": "Acasa",
-      "content": "Bun venit!"
+        "title": "Acasa",
+        "content": "Bun venit!"
+    },
+    "PopularPage": {
+        "title": "Filme popular"
+    },
+    "MoviePage": {
+        "movie_title": "Titlu",
+        "movie_overview": "Prezentare generala",
+        "movie_release_date": "Data lansarii",
+        "movie_rating": "Rating",
+        "movie_genres": "Genuri"
     }
 }

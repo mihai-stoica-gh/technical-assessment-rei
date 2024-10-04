@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import LangSwitcherSelect from './LangSwitcherSelect';
 import { routing } from '@/i18n/routing';
+import styles from './LangSwitcher.module.scss';
 
 export default function LangSwitcher() {
     const t = useTranslations('LangSwitcher');

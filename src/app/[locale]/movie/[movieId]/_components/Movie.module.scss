@@ -1,0 +1,18 @@
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.overview {
+    max-width: 600px;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+  
