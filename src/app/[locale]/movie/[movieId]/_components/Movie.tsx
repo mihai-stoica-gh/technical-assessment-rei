@@ -1,14 +1,15 @@
 import {useTranslations} from 'next-intl';
-import Image from "next/image";
 import styles from './Movie.module.scss';
-import { CalendarDaysIcon, StarIcon, FlagIcon } from 'lucide-react';
+import Image from "next/image";
+import { CalendarDaysIcon, StarIcon, FlagIcon, UserRoundIcon } from 'lucide-react';
 import moment from 'moment';
+
 import type {MovieType} from '@/types/tmdb';
 
 export default function Movie({movie}: {movie: MovieType}) {
     const t = useTranslations('MoviePage');
 
-    const directors = movie.credits?.crew.filter((cast: any) => cast.job === 'Director') ?? [];
+    const directors = movie.credits?.crew.filter((cast) => cast.job === 'Director') ?? [];
     const cast = movie.credits?.cast.slice(0, 5) ?? [];
 
     return (
@@ -21,8 +22,8 @@ export default function Movie({movie}: {movie: MovieType}) {
                             <Image
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                                 alt={`${movie.title} poster`}
-                                width={300}
-                                height={450}
+                                width={400}
+                                height={600}
                             />
                         </div>
                         <div className={styles.info}>
@@ -38,7 +39,7 @@ export default function Movie({movie}: {movie: MovieType}) {
                                 </span>
                                 <span>
                                     <FlagIcon size={18} />
-                                    <strong>{t('movie_genres')}:</strong> {movie.genres.map((genre: any) => genre.name).join(', ')}
+                                    <strong>{t('movie_genres')}:</strong> {movie.genres.map((genre) => genre.name).join(', ')}
                                 </span>
                             </div>
                             <div className={styles.section}>
@@ -48,7 +49,7 @@ export default function Movie({movie}: {movie: MovieType}) {
                             {!!directors.length && (
                                 <div className={styles.section}>
                                     <p className={styles.sectionTitle}>{t('movie_director')}</p>
-                                    {directors.map((director: any) => {
+                                    {directors.map((director) => {
                                         return (
                                             <p key={director.id}>{director.name}</p>
                                         )
@@ -58,7 +59,7 @@ export default function Movie({movie}: {movie: MovieType}) {
                             {!!cast.length && (
                                 <div className={styles.section}>
                                     <p className={styles.sectionTitle}>{t('movie_cast')}</p>
-                                    {cast.map((cast: any) => {
+                                    {cast.map((cast) => {
                                         return (
                                             <p key={cast.id}>{cast.name}</p>
                                         )

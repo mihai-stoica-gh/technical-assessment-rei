@@ -1,11 +1,13 @@
 import {useTranslations} from 'next-intl';
-import Image from "next/image";
-import styles from './Movie.module.scss';
 import { Link } from '@/i18n/routing';
+import styles from './Movie.module.scss';
+import Image from "next/image";
 import { CalendarDaysIcon, StarIcon, ChevronRightIcon } from 'lucide-react';
 import moment from 'moment';
 
-export default function Movie({movie}: any) {
+import type {MovieType} from '@/types/tmdb';
+
+export default function Movie({movie}: {movie: MovieType}) {
     const t = useTranslations('CategoryPage');
 
     return (
@@ -13,8 +15,8 @@ export default function Movie({movie}: any) {
             <Image
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={`${movie.title} poster`}
-                width={300}
-                height={450}
+                width={400}
+                height={600}
             />
             <div className={styles.overlay}>
                 <div className={styles.background}></div>

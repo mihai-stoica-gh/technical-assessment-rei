@@ -26,27 +26,22 @@ async function fetchMovies(locale: string) {
 }
  
 export async function generateMetadata({
-        params: {
-            locale,
-        }
-    }: Readonly<{
-        params: {
-            locale: string,
-        };
-    }>) {
+        params: {locale}
+    }: Readonly<PageProps>) {
+    const t = await getTranslations('UpcomingPage');
 
     return {
-        title: 'Upcoming movies'
+        title: 'MoviesApp - ' + t('title')
     };
 }
 
-type Props = {
+type PageProps = {
     params: {
         locale: string;
     };
 };
 
-export default async function Page({params: {locale}}: Props) {
+export default async function Page({params: {locale}}: PageProps) {
     unstable_setRequestLocale(locale);
     const t = await getTranslations('UpcomingPage');
 

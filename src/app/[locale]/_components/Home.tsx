@@ -3,7 +3,7 @@ import {Link} from '@/i18n/routing';
 import styles from './Home.module.scss';
 import { ClapperboardIcon, ChevronRightIcon } from 'lucide-react';
 
-export default function Movie({movie}: any) {
+export default function Home() {
     const t = useTranslations('HomePage');
 
     return (

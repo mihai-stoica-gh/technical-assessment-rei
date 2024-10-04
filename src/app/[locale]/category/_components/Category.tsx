@@ -1,6 +1,7 @@
 import {useTranslations} from 'next-intl';
-import Movie from "./Movie";
 import styles from './Category.module.scss';
+import Movie from "./Movie";
+
 import type {MovieType} from '@/types/tmdb';
 
 export default function PopularMovies({title, movies}: {title: string, movies: MovieType[]}) {
@@ -12,7 +13,7 @@ export default function PopularMovies({title, movies}: {title: string, movies: M
                 <div className={styles.container}>
                     <h1>{title}</h1>
                     <div className={styles.grid}>
-                        {movies.map((movie: any) => {
+                        {movies.map((movie: MovieType) => {
                             return (
                                 <div key={movie.id} className={styles.item}>
                                     <Movie movie={movie}></Movie>

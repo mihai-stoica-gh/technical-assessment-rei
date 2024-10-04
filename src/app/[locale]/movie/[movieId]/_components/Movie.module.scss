@@ -29,12 +29,13 @@
                 gap: 2rem;
             
                 .cover {
+
                     img {
                         width: 800px;
                     }
                 }
                 .info {
-            
+                    flex-grow: 1;
                 }
                 .title {
                     font-size: 2rem;
@@ -78,6 +79,14 @@
 
                 .movie {
                     flex-direction: row;
+
+                    .cover {
+                        flex-shrink: 0;
+                        width: 400px;
+                    }
+                    .info {
+                        flex-grow: 1;
+                    }
                 }
             }
         }
@@ -93,7 +102,7 @@
             .container {
 
                 .movie {
-                    
+
                     .meta {
                         flex-direction: row;
                         align-items: center;

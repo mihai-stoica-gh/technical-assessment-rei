@@ -3,7 +3,9 @@
         "menu_home": "Acasa",
         "menu_popular": "Populare",
         "menu_toprated": "Apreciate",
-        "menu_upcoming": "Viitoare"
+        "menu_upcoming": "Viitoare",
+        "menu": "Meniu",
+        "close": "Inchide"
     },
     "LangSwitcher": {
         "locale": "{locale, select, en {EN} ro {RO} other {-}}"

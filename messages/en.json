@@ -3,7 +3,9 @@
         "menu_home": "Home",
         "menu_popular": "Popular",
         "menu_toprated": "Top rated",
-        "menu_upcoming": "Upcoming"
+        "menu_upcoming": "Upcoming",
+        "menu": "Menu",
+        "close": "Close"
     },
     "LangSwitcher": {
         "locale": "{locale, select, en {EN} ro {RO} other {-}}"

@@ -1,6 +1,5 @@
 import {getTranslations} from 'next-intl/server';
-import {Link} from '@/i18n/routing';
-import { notFound } from 'next/navigation';
+import {notFound} from 'next/navigation';
 import Movie from './_components/Movie';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
@@ -14,8 +13,7 @@ async function fetchMovie(movieId: string, locale: string) {
     }
 
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=${lang}&append_to_response=credits`,
-      { next: { revalidate: 60 } } // Use ISR to revalidate data every 60 seconds
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=${lang}&append_to_response=credits`
     );
   
     if (!res.ok) {
@@ -37,9 +35,16 @@ export async function generateMetadata({
             movieId: string,
         };
     }>) {
+        
+    const movie = await fetchMovie(movieId, locale);
+    if (!movie) {
+        return {
+            title: '-'
+        };
+    }
 
     return {
-        title: 'Movie details'
+        title: 'MoviesApp - ' + movie.title
     };
 }
 

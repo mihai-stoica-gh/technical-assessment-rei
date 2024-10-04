@@ -26,17 +26,12 @@ async function fetchMovies(locale: string) {
 }
  
 export async function generateMetadata({
-        params: {
-            locale,
-        }
-    }: Readonly<{
-        params: {
-            locale: string,
-        };
-    }>) {
+        params: {locale}
+    }: Readonly<PageProps>) {
+    const t = await getTranslations('PopularPage');
 
     return {
-        title: 'Popular movies'
+        title: 'MoviesApp - ' + t('title')
     };
 }
 

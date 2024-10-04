@@ -1,5 +1,5 @@
 import {useTranslations} from 'next-intl';
-import LangSwitcher from "./LangSwitcher";
+import LangSwitcher from './LangSwitcher';
 import {Link} from "@/i18n/routing";
 import styles from './Header.module.scss';
 import { HomeIcon, ClapperboardIcon } from 'lucide-react';
