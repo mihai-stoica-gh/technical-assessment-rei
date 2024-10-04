@@ -6,9 +6,15 @@ import Movie from './_components/Movie';
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 
 // Fetch movie data from the TMDb API
-async function fetchMovie(movieId: string) {
+async function fetchMovie(movieId: string, locale: string) {
+    let lang = '';
+    switch(locale) {
+        case "ro": lang = 'ro-RO'; break;
+        default: lang = 'en-US';
+    }
+
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US`,
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=${lang}`,
       { next: { revalidate: 60 } } // Use ISR to revalidate data every 60 seconds
     );
   
@@ -47,7 +53,7 @@ type PageProps = {
 export default async function Page({params: {locale, movieId}}: PageProps) {
     const t = await getTranslations('MoviePage');
 
-    const movie = await fetchMovie(movieId);
+    const movie = await fetchMovie(movieId, locale);
     if (!movie) {
         notFound();
     }

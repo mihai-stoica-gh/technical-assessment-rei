@@ -1,5 +1,6 @@
 {
     "Header": {
+        "menu_home": "Acasa",
         "menu_popular": "Populare"
     },
     "LangSwitcher": {
@@ -10,7 +11,8 @@
         "content": "Bun venit!"
     },
     "PopularPage": {
-        "title": "Filme popular"
+        "title": "Filme popular",
+        "view_more": "Mai multe"
     },
     "MoviePage": {
         "movie_title": "Titlu",
