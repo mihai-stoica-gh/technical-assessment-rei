@@ -1,5 +1,5 @@
 import {unstable_setRequestLocale, getTranslations} from 'next-intl/server';
-import PopularMovies from './_components/PopularMovies';
+import Category from './../_components/Category';
 import { notFound } from 'next/navigation';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
@@ -40,13 +40,13 @@ export async function generateMetadata({
     };
 }
 
-type Props = {
+type PageProps = {
     params: {
         locale: string;
     };
 };
 
-export default async function Page({params: {locale}}: Props) {
+export default async function Page({params: {locale}}: PageProps) {
     unstable_setRequestLocale(locale);
     const t = await getTranslations('PopularPage');
 
@@ -57,6 +57,6 @@ export default async function Page({params: {locale}}: Props) {
     const movies = data.results;
 
     return (
-        <PopularMovies movies={movies}></PopularMovies>
+        <Category title={t('title')} movies={movies}></Category>
     );
 }

@@ -16,9 +16,20 @@
         "button_toprated": "Top rated",
         "button_upcoming": "Upcoming"
     },
-    "PopularPage": {
-        "title": "Popular movies",
+    "CategoryPage": {
+        "title_popular": "Popular movies",
+        "title_toprated": "Top rated movies",
+        "title_upcoming": "Upcoming movies",
         "view_more": "View more"
+    },
+    "PopularPage": {
+        "title": "Popular movies"
+    },
+    "TopRatedPage": {
+        "title": "Top rated movies"
+    },
+    "UpcomingPage": {
+        "title": "Upcoming movies"
     },
     "MoviePage": {
         "movie_title": "Title",

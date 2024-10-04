@@ -16,9 +16,20 @@
         "button_toprated": "Apreciate",
         "button_upcoming": "Viitoare"
     },
-    "PopularPage": {
-        "title": "Filme popular",
+    "CategoryPage": {
+        "title_popular": "Filme populare",
+        "title_toprated": "Filme apreciate",
+        "title_upcoming": "Filme viitoare",
         "view_more": "Mai multe"
+    },
+    "PopularPage": {
+        "title": "Filme populare"
+    },
+    "TopRatedPage": {
+        "title": "Filme apreciate"
+    },
+    "UpcomingPage": {
+        "title": "Filme viitoare"
     },
     "MoviePage": {
         "movie_title": "Titlu",

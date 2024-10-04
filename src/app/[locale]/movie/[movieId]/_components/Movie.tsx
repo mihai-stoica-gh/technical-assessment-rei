@@ -41,8 +41,10 @@ export default function Movie({movie}: {movie: MovieType}) {
                                     <strong>{t('movie_genres')}:</strong> {movie.genres.map((genre: any) => genre.name).join(', ')}
                                 </span>
                             </div>
-                            <p className={styles.overview}>{movie.overview}</p>
-
+                            <div className={styles.section}>
+                                <p className={styles.sectionTitle}>{t('movie_overview')}</p>
+                                <p>{movie.overview}</p>
+                            </div>
                             {!!directors.length && (
                                 <div className={styles.section}>
                                     <p className={styles.sectionTitle}>{t('movie_director')}</p>

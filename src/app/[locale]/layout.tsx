@@ -28,13 +28,13 @@ export default async function RootLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
-            <body>
-                <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages}>
+            <html lang={locale}>
+                <body>
                     <Header></Header>
                     {children}
-                </NextIntlClientProvider>
-            </body>
-        </html>
+                </body>
+            </html>
+        </NextIntlClientProvider>
     );
 }

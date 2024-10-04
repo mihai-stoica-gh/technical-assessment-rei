@@ -1,0 +1,79 @@
+.screen {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: #000;
+        opacity: 0.5;
+    }
+    .scrollContainer {
+        position: absolute;
+        inset: 0;
+        left: auto;
+        width: 100%;
+        max-width: 80%;
+        overflow: auto;
+        background: var(--background);
+
+        .scrollContent {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            gap: 1rem;
+
+            .alignRight {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+            }
+            .branding {
+                h1 {
+                    font-size: 1.25rem;
+                    font-weight: 900;
+    
+                    span {
+                        font-weight: 100;
+                        opacity: 0.6;
+                    }
+                }
+            }
+            .menu {
+                padding-top: 1rem;
+                
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    margin: 0;
+                    padding: 0;
+    
+                    li {
+                        
+                        a {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

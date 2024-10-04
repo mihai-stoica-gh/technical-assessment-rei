@@ -3,10 +3,7 @@
     inset: 0;
     bottom: unset;
     height: 100px;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    z-index: 100;
+    z-index: 40;
 
     .background {
         position: absolute;
@@ -15,17 +12,16 @@
         z-index: -1;
     }
     .foreground {
-        width: 100%; 
+        position: relative;
 
         .container {
-            position: relative;
             width: 100%;
             max-width: var(--container-width);
             margin: auto;
             padding: 30px;
             display: flex;
             flex-direction: row;
-            gap: 20px;
+            gap: 25px;
             align-items: center;
             justify-content: space-between;
             
@@ -40,8 +36,11 @@
                     }
                 }
             }
+            .mobileMenu {
+                display: block;
+            }
             .menu {
-                display: flex;
+                display: none;
                 flex-direction: row;
                 gap: 25px;
             
@@ -54,6 +53,24 @@
                     display: flex;
                     gap: 5px;
                     align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) { 
+    .header {
+
+        .foreground {
+
+            .container {
+
+                .mobileMenu {
+                    display: none;
+                }
+                .menu {
+                    display: flex;
                 }
             }
         }
