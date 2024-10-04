@@ -1,12 +1,7 @@
-.container {
+.screen {
     position: relative;
     height: 100svh;
     overflow: auto;
-    padding: 20px;
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     .background {
         position: absolute;
@@ -14,42 +9,64 @@
         background-size: cover;
         opacity: 0.2;
     }
-
-    .movie {
+    .foreground {
         position: relative;
-    }
-}
+        width: 100%;
+        height: 100%;
+        padding-top: var(--header-height);
+        
+        .container {
+            width: 100%;
+            min-height: 100%;
+            max-width: var(--container-width);
+            margin: auto;
+            padding: 30px;
 
-.movie {
-    display: flex;
-    gap: 2rem;
+            .movie {
+                position: relative;
+                display: flex;
+                gap: 2rem;
+            
+                .cover {
+                    img {
+                        width: 800px;
+                    }
+                }
+                .info {
+            
+                }
+                .title {
+                    font-size: 2rem;
+                    margin: 0;
+                }
+                .meta {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    padding-top: 1rem;
+            
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+                .overview {
+                    padding-top: 1rem;
+                }
 
-    .cover {
-        img {
-            width: 800px;
+                .section {
+                    padding-top: 1rem;
+
+                    .sectionTitle {
+                        text-transform: uppercase;
+                        font-size: 0.9rem;
+                        opacity: 0.5;
+                    }
+                }
+
+            }
         }
-    }
-    .info {
-
-    }
-    .title {
-        font-size: 2rem;
-        margin: 0;
-    }
-    .meta {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        padding-top: 1rem;
-
-        span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-    }
-    .overview {
-        padding-top: 1rem;
     }
 }
   

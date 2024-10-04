@@ -1,14 +1,20 @@
 {
     "Header": {
         "menu_home": "Acasa",
-        "menu_popular": "Populare"
+        "menu_popular": "Populare",
+        "menu_toprated": "Apreciate",
+        "menu_upcoming": "Viitoare"
     },
     "LangSwitcher": {
-        "locale": "{locale, select, en {Engleza} ro {Romana} other {Necunoscut}}"
+        "locale": "{locale, select, en {EN} ro {RO} other {-}}"
     },
     "HomePage": {
         "title": "Acasa",
-        "content": "Bun venit!"
+        "line1": "Afla mai multe informatii despre",
+        "line2": "filmele sezonului",
+        "button_popular": "Populare",
+        "button_toprated": "Apreciate",
+        "button_upcoming": "Viitoare"
     },
     "PopularPage": {
         "title": "Filme popular",
@@ -19,6 +25,8 @@
         "movie_overview": "Prezentare generala",
         "movie_release_date": "Data lansarii",
         "movie_rating": "Rating",
-        "movie_genres": "Genuri"
+        "movie_genres": "Genuri",
+        "movie_director": "Regizor",
+        "movie_cast": "Actori principali"
     }
 }

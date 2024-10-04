@@ -14,37 +14,48 @@
         background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
         z-index: -1;
     }
-    .container {
-        position: relative;
-        width: 100%;
-        max-width: 1920px;
-        margin: auto;
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .branding {
-        h1 {
-            font-weight: bold;
-        }
-    }
-    .menu {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    
-        ul {
+    .foreground {
+        width: 100%; 
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: var(--container-width);
+            margin: auto;
+            padding: 30px;
             display: flex;
             flex-direction: row;
             gap: 20px;
-        }
-        a {
-            display: flex;
-            gap: 5px;
             align-items: center;
+            justify-content: space-between;
+            
+            .branding {
+                h1 {
+                    font-size: 1.25rem;
+                    font-weight: 900;
+
+                    span {
+                        font-weight: 100;
+                        opacity: 0.6;
+                    }
+                }
+            }
+            .menu {
+                display: flex;
+                flex-direction: row;
+                gap: 25px;
+            
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                }
+                a {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                }
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ async function fetchMovie(movieId: string, locale: string) {
     }
 
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=${lang}`,
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=${lang}&append_to_response=credits`,
       { next: { revalidate: 60 } } // Use ISR to revalidate data every 60 seconds
     );
   
