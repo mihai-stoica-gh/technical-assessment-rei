@@ -1,0 +1,9 @@
+{
+    "LangSwitcher": {
+        "locale": "{locale, select, en {English} ro {Romanian} other {Unknown}}"
+    },
+    "HomePage": {
+        "title": "Home",
+        "content": "Welcome!"
+    }
+}
